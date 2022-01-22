@@ -1,28 +1,30 @@
 
 <template>
-  <div class="my-input">
-    <label>{{label}}</label>
+  <div class="bad-input">
+    <label :style="{ color: labelColor }">{{label}}</label>
     <input
       :placeholder="inputPlaceholder"
       @input="handleInput"
     >
-    <button @click="handleClick">Click</button>
+    <button @click="handleClick">{{buttonText}}</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "BadInput",
   props: {
     label: String,
+    labelColor: String,
     inputPlaceholder: String,
+    buttonText: String,
   },
   methods: {
     handleInput(newVal) {
-      this.$emit('input', newVal);
+      this.$emit('textChange', newVal);
     },
     handleClick() {
-      this.$emit('confirm');
+      this.$emit('buttonClick');
     },
   },
 };
@@ -30,25 +32,25 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.my-input {
+.bad-input {
   display: flex;
   flex-flow: column;
 }
-.my-input label {
-  color: grey;
+.bad-input label {
   font-family: helvetica;
+  font-size: 14px;
 }
-.my-input input {
+.bad-input input {
   margin-top: 7px;
-  border: 1px solid #efefef;
+  border: 1px solid #cfcfcf;
   height: 35px;
   border-radius: 5px;
   padding: 0 5px;
 }
-.my-input input::placeholder {
+.bad-input input::placeholder {
   color: #aaaaaa;
 }
-.my-input button {
+.bad-input button {
   margin-top: 4px;
   height: 30px;
   border: none;
