@@ -1,13 +1,13 @@
 
 <template>
-  <div class="good-button">
+  <div class="component-root">
     <button @click="handleClick">{{text}}</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "GoodButton",
+  name: "Button",
   props: {
     text: String,
   },
@@ -21,10 +21,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.good-button {
+.component-root {
   display: flex;
 }
-.good-button button {
+.component-root button {
   width: 100%;
   height: 30px;
   border: none;

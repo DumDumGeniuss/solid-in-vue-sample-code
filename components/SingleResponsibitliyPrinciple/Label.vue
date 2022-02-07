@@ -1,13 +1,13 @@
 
 <template>
-  <div class="good-label">
+  <div class="component-root">
     <label :style="{ color }">{{text}}</label>
   </div>
 </template>
 
 <script>
 export default {
-  name: "GoodLabel",
+  name: "Label",
   props: {
     text: String,
     color: String,
@@ -17,11 +17,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.good-label {
+.component-root {
   display: flex;
   flex-flow: column;
 }
-.good-label label {
+.component-root label {
   font-family: helvetica;
   font-size: 14px;
 }

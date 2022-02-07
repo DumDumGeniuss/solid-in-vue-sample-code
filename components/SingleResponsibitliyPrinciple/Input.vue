@@ -1,6 +1,6 @@
 
 <template>
-  <div class="good-input">
+  <div class="component-root">
     <input
       :placeholder="placeholder"
       @input="handleInput"
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "GoodInput",
+  name: "Input",
   props: {
     placeholder: String,
   },
@@ -24,17 +24,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.good-input {
+.component-root {
   display: flex;
 }
-.good-input input {
+.component-root input {
   width: 100%;
   border: 1px solid #cfcfcf;
   height: 35px;
   border-radius: 5px;
   padding: 0 5px;
 }
-.good-input input::placeholder {
+.component-root input::placeholder {
   color: #aaaaaa;
 }
 </style>

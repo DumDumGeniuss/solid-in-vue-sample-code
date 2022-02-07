@@ -1,6 +1,6 @@
 
 <template>
-  <div class="bad-input">
+  <div class="component-root">
     <label :style="{ color: labelColor }">{{label}}</label>
     <input
       :placeholder="inputPlaceholder"
@@ -32,25 +32,25 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.bad-input {
+.component-root {
   display: flex;
   flex-flow: column;
 }
-.bad-input label {
+.component-root label {
   font-family: helvetica;
   font-size: 14px;
 }
-.bad-input input {
+.component-root input {
   margin-top: 7px;
   border: 1px solid #cfcfcf;
   height: 35px;
   border-radius: 5px;
   padding: 0 5px;
 }
-.bad-input input::placeholder {
+.component-root input::placeholder {
   color: #aaaaaa;
 }
-.bad-input button {
+.component-root button {
   margin-top: 4px;
   height: 30px;
   border: none;
